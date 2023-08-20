@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
             $table->string('namecountry');
-            $table->string('Zipcode');
+            $table->string('zipcode');
             $table->string('continents');
             $table->timestamps();
         });

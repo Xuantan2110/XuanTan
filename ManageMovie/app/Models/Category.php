@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
+    protected $table='categories';
+    protected $fillable=['namecategory'];
+    public function films()
+    {
+        return $this->belongsToMany(Film::class);
+    }
 }

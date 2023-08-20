@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>@yield('title')</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,6 +14,24 @@
 </head>
 <body>
   <header>
+			<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+				  <div class="container">
+					<a class="navbar-brand" href="#">ABC</a>
+					<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="collapsibleNavId">
+						<form class="d-flex my-2 my-lg-0">
+							<input class="form-control me-sm-2" type="text" placeholder="Search">
+							<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+						</form>
+					</div>
+					<a style="text-decoration: none;" href="">Log out</a>
+			    </div>
+          </nav>
+</header>
+  <main>
   <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
@@ -41,31 +59,8 @@
                 
             </div>
         </div>
-        <div class="col py-3">
-			<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-				  <div class="container">
-					<a class="navbar-brand" href="#">Home</a>
-					<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-						aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="collapsibleNavId">
-						<form class="d-flex my-2 my-lg-0">
-							<input class="form-control me-sm-2" type="text" placeholder="Search">
-							<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-						</form>
-					</div>
-					<a style="text-decoration: none;" href="">Log out></a>
-					
-			  </div>
-                </div>
-			</nav>
-        </div>
     </div>
-</div>
-  </header>
-  <main>
-	@yield('content')
+  </div>
   </main>
   <footer>
 	<!-- place footer here -->
