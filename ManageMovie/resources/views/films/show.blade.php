@@ -2,4 +2,6 @@
 @section('title', 'Films')
 @section('content')
 
+@stop
+
 
