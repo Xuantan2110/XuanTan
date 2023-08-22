@@ -1,17 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Country;
 use Illuminate\Http\Request;
 
-class Country extends Controller
+
+class CountryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $countries=Country::all();
+        return view('countries.index', ['countries' => $countries]);
     }
 
     /**
@@ -19,7 +21,7 @@ class Country extends Controller
      */
     public function create()
     {
-        //
+        return view('countries.create');
     }
 
     /**
@@ -27,7 +29,12 @@ class Country extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $country = new Country();
+        $country->namecountry = $request->namecountry;
+        $country->zipcode = $request->zipcode;
+        $country->continents = $request->continents;
+        $country->save();
+        return redirect('country');
     }
 
     /**
@@ -35,7 +42,8 @@ class Country extends Controller
      */
     public function show(string $id)
     {
-        //
+        $country = Country::find($id);
+        return view('countries.show', ['country' => $country]);
     }
 
     /**
@@ -43,7 +51,8 @@ class Country extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $country = Country::find($id);
+        return view('countries.edit', ['country' => $country]);
     }
 
     /**
@@ -51,7 +60,12 @@ class Country extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $country = Country::find($id);
+        $country->namecountry = $request->namecountry;
+        $country->zipcode = $request->zipcode;
+        $country->continents = $request->continents;
+        $country->save();
+        return redirect('/country');
     }
 
     /**
@@ -59,6 +73,8 @@ class Country extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $country = Country::find($id);
+        $country->delete();
+        return redirect('/country');
     }
 }
