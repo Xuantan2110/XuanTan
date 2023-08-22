@@ -20,8 +20,8 @@
             <td>{{ $country->zipcode }}</td>
             <td>{{ $country->continents }}</td>
             <td>
-                <a href="/country/{{$country->id}}/edit">Edit</a>
-                <form action="/country/{{ $country->id }}" method="post" style="display: inline">
+                <a href="/countries/{{$country->id}}/edit">Edit</a>
+                <form action="/countries/{{ $country->id }}" method="post" style="display: inline">
                     @method('DELETE')
                     @csrf
                     <input type="submit" value="Delete" onclick="return confirm('Are you sure?');">

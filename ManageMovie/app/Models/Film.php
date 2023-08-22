@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Film extends Model
 {
     use HasFactory;
-    protected $table = 'books'; 
-    protected $fillable = ['namefilm', 'director', 'lengthtime', 'releaseyear', 'country_id'];
+    protected $table = 'films'; 
+    protected $fillable = ['namefilm','image', 'director', 'lengthtime', 'releaseyear', 'country_id'];
     public function countries()
     {
         return $this->belongsTo(Country::class);
