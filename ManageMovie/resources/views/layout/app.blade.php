@@ -72,9 +72,9 @@ div.content {
 <body>
 <div class="sidebar">
   <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
+  <a href="/Film">Films</a>
+  <a href="/category">Category</a>
+  <a href="/country">Country</a>
 </div>
 <div style="padding-top: 40px;" class="container">
 <div class="content">
