@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\FilmController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,11 +17,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Home.index');
 });
 
 Route::resources(
     [
         'country'=> CountryController::class
+    ]
+    );
+Route::resources(
+     [
+         'category'=> CategoryController::class
+     ]
+     );
+Route::resources(
+    [
+        'film'=> FilmController::class
     ]
     );
