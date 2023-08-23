@@ -10,7 +10,7 @@ class Film extends Model
     use HasFactory;
     protected $table = 'films'; 
     protected $fillable = ['namefilm','image', 'director', 'lengthtime', 'releaseyear', 'country_id'];
-    public function countries()
+    public function country()
     {
         return $this->belongsTo(Country::class);
     }

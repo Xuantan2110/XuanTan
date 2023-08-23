@@ -21,7 +21,6 @@
             <td>{{ $country->zipcode }}</td>
             <td>{{ $country->continents }}</td>
             <td>
-<<<<<<< HEAD
             <button style="margin-bottom: 10px;" ><a style="text-decoration: none;color:black;" href="/country/{{$country->id}}/edit">Edit</a></button>
                 <form action="/country/{{ $country->id }}" method="post" style="display: inline">
                     @method('DELETE')
