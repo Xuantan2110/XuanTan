@@ -34,17 +34,10 @@ class FilmController extends Controller
     {
         $film = new Film();
         $film->namefilm = $request->namefilm;
-<<<<<<< HEAD
-        if ($request->hasFile('image')) 
-        {
-=======
-        
->>>>>>> 4e15b85e9a8473ce682778742c3b78088fb8144f
         if ($request->hasFile('image')) {
             $film->image = $request->file('image')->store('public/images');
             $film->image = env('APP_URL').str_replace('public/', '/upload/', $film->image);
         }
-
         $film->director = $request->director;
         $film->lengthtime = $request->lengthtime;
         $film->releaseyear = $request->releaseyear;
@@ -52,10 +45,6 @@ class FilmController extends Controller
         $film->save();
         $film->categories()->attach($request->categories);
         return redirect('/film');
-<<<<<<< HEAD
-        }
-=======
->>>>>>> 4e15b85e9a8473ce682778742c3b78088fb8144f
     }
 
     /**
@@ -75,11 +64,7 @@ class FilmController extends Controller
         $film = Film::find($id);
         $countries = Country::all();
         $categories = Category::all();
-<<<<<<< HEAD
         return view('films.edit', ['film'=>$film, 'countries' => $countries, 'categories' => $categories]);
-=======
->>>>>>> 4e15b85e9a8473ce682778742c3b78088fb8144f
-        return view('film.edit', ['film'=>$film, 'countries' => $countries, 'categories' => $categories]);
     }
 
     /**
@@ -87,11 +72,7 @@ class FilmController extends Controller
      */
     public function update(Request $request, string $id)
     {
-<<<<<<< HEAD
         $film = Film::find($id);
-=======
->>>>>>> 4e15b85e9a8473ce682778742c3b78088fb8144f
-        $film = new Film();
         $film->namefilm = $request->namefilm;
         if ($request->hasFile('image')) {
             $film->image = $request->file('image')->store('public/images');

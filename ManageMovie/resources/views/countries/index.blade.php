@@ -24,10 +24,6 @@
 <<<<<<< HEAD
             <button style="margin-bottom: 10px;" ><a style="text-decoration: none;color:black;" href="/country/{{$country->id}}/edit">Edit</a></button>
                 <form action="/country/{{ $country->id }}" method="post" style="display: inline">
-=======
-                <a href="/countries/{{$country->id}}/edit">Edit</a>
-                <form action="/countries/{{ $country->id }}" method="post" style="display: inline">
->>>>>>> 4e15b85e9a8473ce682778742c3b78088fb8144f
                     @method('DELETE')
                     @csrf
                     <input type="submit" value="Delete" onclick="return confirm('Are you sure?');">

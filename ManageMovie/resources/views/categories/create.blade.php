@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('layout.app')
 @section('title', 'Country')
 @section('content')
@@ -11,12 +10,4 @@
     <input type="submit" value="Create">
 </form>
 @stop
-=======
-<form action="/category" method="post">
-    @csrf
-    <label for="namecategory">Name Category</label>
-    <input type="text" name="namecategory" id="namecategory">
-    <br>
-    <input type="submit" value="Create">
-</form>
->>>>>>> 4e15b85e9a8473ce682778742c3b78088fb8144f
+
